@@ -16,17 +16,19 @@ while True:
         temperature = float(input("Enter the temperature to convert: "))
         break
     except ValueError:
-        print("Invalid input! Please enter a valid number.")
+        print("Invalid temperature. Please enter a numeric value.")
 
 while True:
-        metric =input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
-        if metric == "F":
-            convert_to_celsius(temperature)
-            break
-        elif metric == "C":
-            convert_to_fahrenheit(temperature)
-            break
-        else:
-            print("wrong input")
+    metric =input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
+    if metric == "F":
+        convert_to_celsius(temperature)
+        break
+    elif metric == "C":
+        convert_to_fahrenheit(temperature)
+        break
+    else:
+        print("wrong input, please enter either C or F.")
+
+
 
 
